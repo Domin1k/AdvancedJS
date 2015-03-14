@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="extenssions.js"></script>
+    <script src="shape.js"></script>
+    <script src="twoPointFigure.js"></script>
+    <script src="circle.js"></script>
+    <script src="rectangle.js"></script>
+    <script src="triangle.js"></script>
+    <script src="line.js"></script>
+    <script src="segment.js"></script>
+    <title></title>
+</head>
+<body>
+<h1>Look at the console</h1>
+<script>
+    //Demos
+    var shapeModule = (function () {
+        return {
+            createShape: new worldObject.Shape(10 , 25, "#FFF"),
+            createCircle: new worldObject.Circle(5, 15, "#FF0", 2),
+            createRectangle:new worldObject.Rectangle(2, 55,"#F0F", 54, 23),
+            createTriangle: new worldObject.Triangle(2, 55,"#FA2", 2, 5, 10, 15),
+            createLine: new worldObject.Line(212, 5,"#000", 21, 15),
+            createSegment:new worldObject.Segment(55, 66,"#00F", 0, 105)
+        };
+    }());
+    console.log(" Shape - " + shapeModule.createShape.toString());
+    console.log(" Cicrcle - " + shapeModule.createCircle.toString());
+    console.log(" Rectangle - " + shapeModule.createRectangle.toString());
+    console.log(" Triangle - " + shapeModule.createTriangle.toString());
+    console.log(" Line - " + shapeModule.createLine.toString());
+    console.log(" Segment - " + shapeModule.createSegment.toString());
+</script>
+</body>
+</html>

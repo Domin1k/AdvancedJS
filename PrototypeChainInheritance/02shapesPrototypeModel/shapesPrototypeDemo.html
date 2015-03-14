@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="extenssions.js"></script>
+    <script src="shapePrototype.js"></script>
+    <script src="circlePrototype.js"></script>
+    <script src="rectanglePrototype.js"></script>
+    <script src="trianglePrototype.js"></script>
+    <script src="linePrototype.js"></script>
+    <script src="segmentPrototype.js"></script>
+</head>
+<body>
+    <h1>Look at the console</h1>
+    <script>
+        var shapePrototypeModule = (function () {
+            return {
+                createShapePrototype: Object.create(Shape).constructor(5, 10, "FFF"),
+                createCirclePrototype: Object.create(Circle).constructor(12, 15, "000", 5),
+                createRectanglePrototype: Object.create(Rectangle).constructor(25, 25, "FBF", 10, 10),
+                createTrianglePrototype: Object.create(Triangle).constructor(5, 13, "0F0", 13, 15, 200, 100),
+                createLinePrototype: Object.create(Line).constructor(200, 50, "2130043", 30, 35),
+                createSegmentPrototype: Object.create(Segment).constructor(122, 133, "FABFAA", 54, 65)
+            }
+        }());
+
+        console.log(shapePrototypeModule.createShapePrototype.toString());
+        console.log(shapePrototypeModule.createCirclePrototype.toString());
+        console.log(shapePrototypeModule.createRectanglePrototype.toString());
+        console.log(shapePrototypeModule.createTrianglePrototype.toString());
+        console.log(shapePrototypeModule.createLinePrototype.toString());
+        console.log(shapePrototypeModule.createSegmentPrototype.toString());
+
+    </script>
+</body>
+</html>
